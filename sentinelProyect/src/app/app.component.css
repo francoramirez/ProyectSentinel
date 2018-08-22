@@ -1,61 +1,191 @@
-.background-image
-{
-    background-image: url("/src/assets/imagen/fondo.jpg");
+/*
+body {
+    background-image: url('/src/assets/imagen/fondowebppp.jpg');
     background-color: #FFFFFF;
-    height: 600px;
+    height: 974px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+*/
+
+  /* 
+  ##Device = Desktops
+  ##Screen = 1481px to higher resolution desktops
+*/
+
+@media (min-width: 1531px) {
+
+#background-screen {
+    background-image: url('/src/assets/imagen/fondowebppp.jpg');
+    position: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+   -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+}
+.register {
+   position: absolute;
+   right: 1200px;
+   top: 250px;
+   width: 630px;
+   height: 550px;
+   padding: 100px;
+   background: #FFFFFF;
+   border-radius: 15px;
+   -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+   box-shadow: 2px 3px 10px black;
+ }
+ input {
+   font-family: inherit;
+   font-size: inherit;
+   color: inherit;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+ .register-input {
+   display: block;
+   width: 80%;
+   height: 50px;
+   margin-top: 30px;
+   font-weight: 500;
+   margin-left: 40px;
+   background: none;
+   border: 0;
+   border-bottom: 1px solid #d8d8d8;
+ }
+ .register-input:focus {
+   border-color: #1e9ce6;
+   outline: 0;
+ }
+ .icon-user {
+   position: absolute;
+   left: 60px;
+   top: 175px;
+ }
+ .icon-password { 
+   position: absolute;
+   left: 60px;
+   top: 275px;
+ }
+ .check-session {
+   position: absolute;
+   left: 60px;
+   top: 340px;
+ }
+ .message-checkbox {
+   position: absolute;
+   left: 90px;
+   top: 338px;
+   color: #999999;
+ }
+ .form-check-input {
+   width: 1.3rem;
+   height: 1.3rem;
+ }
+ a:visited {
+   color: #FD9526;
+ }
+ a:hover {
+   color: #4d4d44;
+ }
+ .recover-password {
+   position: absolute;
+   left: 320px;
+   top: 339px;
+ }
+ .view-password {
+   position: absolute;
+   left: 450px;
+   top: 280px;
+ }
+.btn-warning {
+  background-color: #FD9526;
+  border-color: #FD9526;
+  color: #FFFFFF;
+  border-width: 2px;
+}
+.btn-warning:hover, .btn-warning:active {
+  background-color: #FFFFFF;
+  border-color: #FD9526;
+  color: #FD9526;  
+  border-width: 2px;
+}
+.start-session {
+  position: absolute;
+  top: 450px;
+  left: 100px;
+}
+.create-account {
+  position: absolute;
+  top: 450px;
+  left: 350px;
+}
 }
 
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  
+}
 
-.register {
-    margin: 0 auto;
-    position: relative;
-    right: 400px;
-    top: 200px;
-    width: 540px;
-    padding: 60px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
 
-  input {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  
+}
 
-  .register-input {
-    display: block;
-    width: 80%;
-    height: 50px;
-    margin-top: 30px;
-    font-weight: 500;
-    margin-left: 40px;
-    background: none;
-    border: 0;
-    border-bottom: 1px solid #d8d8d8;
-  }
-  .register-input:focus {
-    border-color: #1e9ce6;
-    outline: 0;
-  }
-  .iconUser{
-  position: absolute;
-  left: 50px;
-  top: 175px;
-  }
-  .iconPassword{
-    position: absolute;
-    left: 60px;
-    top: 275px;
-  }
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  
+}
