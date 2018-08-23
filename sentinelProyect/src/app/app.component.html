@@ -12,27 +12,34 @@
 </head>
 <body>
     <img id="background-screen">
+    <img id="logo">
         <div class="register">
             <app-message></app-message>
             <div class="icon-user">
                 <h1 class="fa fa-user-circle fa-2x"></h1>
             </div>
             <div class="label-user">
-                <input type="user" class="register-input" name="user" placeholder="Usuario (DNI)"><br>    
+                <input type="user" class="form-control" name="user" id="user" [(ngModel)]="model.user" #user="ngModel" [ngClass]="{ 'is-invalid': name.invalid }" required maxlength="12" placeholder="Usuario (DNI)"><br>    
+            </div>
+            <div>
+
+            </div>
+            <div>
+                
             </div>
             <div class="icon-password">
                 <h1 class="fa fa-lock fa-2x"></h1> 
             </div>
             <div class="label-password">
-                <input type="password" class="register-input" name="password" placeholder="Contraseña">
+                <input type="password" class="form-control" name="password" id="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': password.invalid }" required maxlength="16" minlength="8" placeholder="Contraseña"> 
             </div>
-            <div class="view-password">
+            <span class="view-password">
                 <h1 class="fa fa-eye fa-2x"></h1>
-            </div>
+            </span>
             <div class="check-session">
                  <div class="form-check-inline">
                     <label class="form-check-label" for="check1">
-                      <input type="checkbox" class="form-check-input" id="activeSession" name="activeSession" value="0">
+                      <input type="checkbox" class="form-check-input" id="activeSession" name="activeSession">
                     </label>
                  </div>
             </div>
@@ -43,10 +50,10 @@
               <a href="">Olvidé mi contraseña</a> 
             </div>
             <div class="start-session">
-              <button type="button" class="btn btn-warning btn-lg"><strong>Iniciar Sesión</strong></button>
+              <button type="button" class="btn btn-warning btn-md" name="startSession" id="startSession"><strong>Iniciar Sesión</strong></button>
             </div>
             <div class="create-account">
-              <button type="button" class="btn btn-warning btn-lg"><strong>Crear Cuenta</strong></button> 
+              <button type="button" class="btn btn-warning btn-md"><strong>Crear Cuenta</strong></button> 
             </div>
         </div>
 </body>
