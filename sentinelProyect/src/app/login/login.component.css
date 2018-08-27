@@ -5,9 +5,54 @@
     background-attachment: fixed; 
     background-repeat: no-repeat;
 }
+.background-login {
+    background-image: url('/src/assets/imagen/fondowebppp.jpg');
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.text-information {
+    text-align: justify;
+}
+.box-login {
+    background: #FFFFFF;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 3px 10px black;
+    padding: 55px;
+    margin-top: 25%;
+}
+.form-control {
+    outline: none;
+    box-shadow:none !important;
+    border:0px solid #ccc;
+    right: 25px;
+}
 footer {
     padding: 5%;
     color: #f2f2f2;
     font-size: 14px;
     box-align: center;
+}
+.fa-user-circle {
+    color: #999999;
+}
+.fa-lock {
+    color: #999999;
+    padding-top: 50px;
+    padding-left: 7px;
+}
+.input-group {
+    margin-left: 20px;
+}
+#label-password {
+    top: 47px;
+    right: 12px;
+}
+#line-user {
+    border: 1px;
+    color: black;
 }

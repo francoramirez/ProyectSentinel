@@ -1,37 +1,29 @@
 
-.margin-top-20 {
-  margin-top: 20px !important;
-}
-.padding-top-40 {
-  padding-top: 40px !important;
-}
-.padding-top-60 {
-  padding-top: 60px !important;
-}
-.padding-top-80 {
-  padding-top: 80px !important;
-}
-.padding-top-100 {
-  padding-top: 100px !important;
-}
-.padding-top-140 {
-  padding-top: 140px !important;
- }
- .margin-top-120 {
-   margin-top: 120px !important;
- }
-
-  .no-padding{
-    padding: 0px !important;
+  .margin-top-20 {
+    margin-top: 20px !important;
   }
-  body{
-    background-image: url('/src/assets/imagen/fondowebppp.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; 
+  .padding-top-40 {
+    padding-top: 40px !important;
   }
-  .button-standard {
+  .padding-top-80 {
+    padding-top: 80px !important;
+  }
+  .padding-top-100 {
+    padding-top: 100px !important;
+  }
+  .padding-top-140 {
+    padding-top: 140px !important;
+  }
+  .margin-top-120 {
+    margin-top: 120px !important;
+  }
+  .no-padding {
+      padding: 0px !important;
+  }
+  .margin-right-20 {
+    margin-right: 20px !important;
+  }
+ .button-standard {
     background-color: #FD9526;
     border-radius: 4px;
     height: 70px;
@@ -48,30 +40,18 @@
     font-weight: bold;
     font-size: 20px;
   } 
-  
-  .box-login {
-      background: #FFFFFF;
-      border-radius: 15px;
-      -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-      box-shadow: 2px 3px 10px black;
-      padding: 35px;
-      margin-top: 20%;
-  }
   .form-control {
     font-weight: 500;
     font-size: 18px;
     border: 0px;
     padding: 0px;
   }
-
   .form-control:active {
     border:0px;
     color: #f2f2f2;
   }
-
-
   .box-login .no-padding {
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 0px solid #d8d8d8;
   }
   
   

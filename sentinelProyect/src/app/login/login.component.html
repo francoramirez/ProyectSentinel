@@ -1,44 +1,52 @@
- <div class="col-sm-8 col-sm-offset-4 col-lg-5 col-lg-offset-7">
-        <div class="row box-login">
-            <div>
-             <p>Para conocer su Reporte de Deudas Gratis o para comprar
-                un producto, debe estar registrado. Inicie su sesión o cree
-                su cuenta.</p>
-            </div>
-            <!-- DNI-->
-                <div class="col-lg-2 no-padding">
+<div class="background-login">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-4 col-lg-5 col-lg-offset-7">
+            <div class="row box-login">
+                <div class="text-information">
+                    <p>Para conocer su Reporte de Deudas Gratis o para comprar un producto, debe estar registrado. Inicie
+                        su sesión o cree su cuenta.</p>
+                </div>
+                <!-- DNI-->
+                <div class="col-lg-2 no-padding" id="icon-user">
                     <i class="fa fa-user-circle fa-2x" style="padding-top:5px"></i>
                 </div>
                 <div class="col-lg-10 no-padding">
-                    <input type="user" class="form-control" name="user" id="user" maxlength="12" placeholder="Usuario (DNI)"><br>    
+                    <div class="input-group">
+                        <input id="user" type="text" class="form-control" name="user" placeholder="Usuario(DNI)">
+                    </div>
                 </div>
-            <!-- PASS-->
-            <div class="col-lg-2 padding-top-20">
-                <i class="fa fa-lock fa-2x"></i>
-            </div>
-            <div class="col-lg-10 padding-top-20">
-                <input type="password" class="form-control" name="password" id="password" maxlength="16" minlength="8" placeholder="Contraseña"> 
-            </div>
-            <!-- NO CERRAR SESION / OLVIDE MI CONTRASEÑA-->
-            <div class="col-lg-2 col-sm- padding-top-40">
-                <div class="form-check-inline">
-                    <label class="form-check-label" for="check1">
-                        <input type="checkbox" class="form-check-input" id="activeSession" name="activeSession">
-                    </label>
+                <hr id="line-user">
+                <!-- PASS-->
+                <div class="col-lg-2 no-padding">
+                    <i class="fa fa-lock fa-2x"></i>
                 </div>
-            </div>
-            <div class="col-lg-4 padding-top-40">
-                <p>No cerrar sesión</p>
-            </div>
-            <div class="col-lg-6 padding-top-40">
-                <a href="">Olvidé mi contraseña</a> 
-            </div>
-            <div class="col-lg-6 col-sm-4 padding-top-20">
-                    <button type="button" class="button-standard">Iniciar Sesión</button>
-            </div>
-            <div class="col-lg-6 col-sm-4 padding-top-20">
+                <div class="col-lg-10">
+                    <div class="input-group" id="label-password">
+                        <input type="password" class="form-control" name="password" id="password" maxlength="16" minlength="8" placeholder="Contraseña">
+                    </div>
+                </div>
+                <!-- NO CERRAR SESION / OLVIDE MI CONTRASEÑA-->
+                <div class="col-lg-2 col-sm- padding-top-40">
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="check1">
+                            <input type="checkbox" class="form-check-input" id="activeSession" name="activeSession">
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-4 padding-top-40">
+                    <p>No cerrar sesión</p>
+                </div>
+                <div class="col-lg-6 padding-top-40">
+                    <a href="">Olvidé mi contraseña</a>
+                </div>
+                <div class="col-lg-6 col-sm-4 padding-top-20">
+                    <button type="button" class="button-standard" (click)="LoginClickHome()">Iniciar Sesión</button>
+                </div>
+                <div class="col-lg-6 col-sm-4 padding-top-20">
                     <button type="button" class="button-standard">Crear Cuenta</button>
+                </div>
             </div>
         </div>
+        <footer> © 2017 Sentinel Perú SA - Todos los derechos reservados</footer>
     </div>
-    <footer> © 2017 Sentinel Perú SA - Todos los derechos reservados</footer>
+</div>
