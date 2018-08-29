@@ -1,6 +1,5 @@
-
-  .margin-top-20 {
-    margin-top: 20px !important;
+  .margin-top-30 {
+    margin-top: 30px !important;
   }
   .padding-top-40 {
     padding-top: 40px !important;
@@ -20,25 +19,34 @@
   .no-padding {
       padding: 0px !important;
   }
+  .si-padding-l {
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+  }
+  .si-padding-r {
+    padding-left: 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+  }
   .margin-right-20 {
     margin-right: 20px !important;
   }
  .button-standard {
     background-color: #FD9526;
     border-radius: 4px;
-    height: 70px;
-    width: 200px;
-    margin: 4px 2px; 
+    padding: 15px 0;
     color: #f2f2f2;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+    width: 100%;
   }
   .button-standard:active, .button-standard:hover {
     background-color: #FFFFFF;
     border-color: #FD9526;
     color: #FD9526;  
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
   } 
   .form-control {
     font-weight: 500;

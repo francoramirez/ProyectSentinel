@@ -1,9 +1,11 @@
-#logo {
-    background-image: url('/src/assets/imagen/logo.png');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
+@media only screen and (min-width: 601px) and (max-width: 1920px) {
+
+.responsive-img {
+   width: 60%;
+   height: auto;
+   position: relative;
+   top: 55px;
+   left: 30px;
 }
 .background-login {
     background-image: url('/src/assets/imagen/fondowebppp.jpg');
@@ -13,46 +15,88 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-.text-information {
-    text-align: justify;
+    overflow: auto;
 }
 .box-login {
-    background: #FFFFFF;
-    border-radius: 15px;
-    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 3px 10px black;
-    padding: 55px;
-    margin-top: 25%;
-}
-.form-control {
-    outline: none;
-    box-shadow:none !important;
-    border:0px solid #ccc;
-    right: 25px;
+      background-color: #ffffff;
+      position: relative;
+      top: 100px;
+      left: 55px;
 }
 footer {
-    padding: 5%;
-    color: #f2f2f2;
-    font-size: 14px;
-    box-align: center;
+    position: relative;
+    top: 140px;
+    left: 40px;
 }
-.fa-user-circle {
-    color: #999999;
+
 }
-.fa-lock {
-    color: #999999;
-    padding-top: 50px;
-    padding-left: 7px;
+@media only screen and (min-device-width: 575px) and (max-device-width: 600px) {
+    
+    .responsive-img {
+        width: 50%;
+        height: auto;
+        position: relative;
+        top: 20px;
+        left: 60px;
+     }
+
+    .background-login {
+        background-image: url('/src/assets/imagen/fondowebppp.jpg');
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .text-information {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px; 
+    }
+    .box-login {
+        background: #FFFFFF;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 3px 10px black;
+        padding-left: 13%;
+        padding-right: 14%;
+        padding-top: 15%;
+        padding-bottom: 10%;
+        position: relative;
+        left: 60px;
+        top: 25px;
+    }
 }
-.input-group {
-    margin-left: 20px;
-}
-#label-password {
-    top: 47px;
-    right: 12px;
-}
-#line-user {
-    border: 1px;
-    color: black;
+@media only screen and (min-device-width: 575px) and (max-device-width: 574px) {
+    
+    .responsive-img {
+        width: 70%;
+        height: auto;
+        position: relative;
+        top: 55px;
+        left: 30px;
+     }
+
+    .background-login {
+        background-image: url('/src/assets/imagen/fondowebppp.jpg');
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .text-information {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4px; 
+    }
+    .box-login {
+        background: #FFFFFF;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 3px 10px black;
+        padding-left: 9%;
+        padding-right: 9%;
+        padding-top: 15%;
+        padding-bottom: 10%;
+        margin-right: 8%;
+    }
 }
