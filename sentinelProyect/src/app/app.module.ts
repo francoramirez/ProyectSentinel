@@ -6,16 +6,26 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { HeaderComponent } from './header/header.component';
+import { FooterReportComponent } from './footer-report/footer-report.component';
+import { FooterHomeComponent } from './footer-home/footer-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterReportComponent,
+    FooterHomeComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), AppRoutingModule
+    MatTabsModule, MatToolbarModule, MatMenuModule, BrowserModule, FormsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), AppRoutingModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
