@@ -1,0 +1,28 @@
+.logo-header {
+   width: 100%; 
+   height: auto;
+}
+.home {
+    position: relative;
+    left: 80px;
+    bottom: 25px;
+    border-color: #f2f2f2;
+}
+.material-icons {
+    color: #999999;
+}
+.flex-container {    
+    margin-top: 10px;
+    display: flex;
+    align-items: space-between;
+    flex-flow: row nowrap;
+    align-self: center;
+}
+.sentinel-flex-column {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+}
+
+
+ 

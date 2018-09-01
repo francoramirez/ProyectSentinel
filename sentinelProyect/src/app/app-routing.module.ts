@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 import { MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 
 const routes: Route[] = [
   {
-   path: '', component: LoginComponent
+   path: '', redirectTo: '/login', pathMatch: 'full'
   },
   {
     path: 'login', component: LoginComponent
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'app', loadChildren: './pages/home/home.module#HomeModule'
   }
 ]
 

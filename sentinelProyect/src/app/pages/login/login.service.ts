@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RequestOptions, Http, Response, Headers } from '@angular/http';
-import { ICliente } from './commons/Models/Interface/icliente.interface';
 import { map } from 'rxjs/operators';
 import { catchError } from 'rxjs/operators';
-import { Cliente } from './commons/Models/cliente.model';
 import { Observable, of } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { ICliente } from '../../commons/Models/Interface/icliente.interface';
+import { Cliente } from '../../commons/Models/cliente.model';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class SentinelService {
-
-  pathLogin: string = 'https://misentinel.sentinelperu.com/misentinelws/rest/rws_mslogin';
+@Injectable()
+export class LoginService {
 
   constructor(private http: HttpClient) { 
 
-  }
+  }  
+
 /*
   getData() {
     return this.http.get('https://www.googleapis.com/blogger/v3/blogs/2399953?key=AIzaSyCp3etkeMAvnyrF-jKNMAVz8LLn9Pk7RJI')
@@ -25,7 +23,7 @@ export class SentinelService {
     })
   }
 */
-postLogin(userLogin, passwordLogin) {
+postLogin(userLogin, passwordLogin): Observable<Cliente> {
 
   /** application/json */
   let headers: HttpHeaders = new HttpHeaders().set('Content-Type','text/plain');
@@ -43,7 +41,7 @@ postLogin(userLogin, passwordLogin) {
     }
   );
 
-  this.http.post(this.pathLogin, body, {headers: headers})
+  return this.http.post( `${environment.urlApi}/rws_mslogin`, body, {headers: headers})
   .pipe( map( (resp: ICliente) => {
 
     const cliente: Cliente = new Cliente();
@@ -62,13 +60,7 @@ postLogin(userLogin, passwordLogin) {
 
     return of(cliente);
 
-  }) )
-  .subscribe( (resp: Cliente) => {
-    
-    console.log('Exito', resp.NombresFull);
-  }, (err) => {
-    console.log('Error', err);
-  });
+  }) );
 }
 
 }

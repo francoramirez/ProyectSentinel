@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlApi: 'https://misentinel.sentinelperu.com/misentinelws/rest/'
 };
