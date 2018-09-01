@@ -14,10 +14,11 @@
 .material-icons {
     color: #999999;
 }
-.purchase {
-   position: relative;
-   bottom: 40px;
-   left: 85%;
+nav {
+    position: relative;
+    width: 10%;
+    left: 1000px;
+    bottom: 38px;
 }
 
  
