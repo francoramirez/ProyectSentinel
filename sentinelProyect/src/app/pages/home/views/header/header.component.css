@@ -11,9 +11,13 @@
 .material-icons {
     color: #999999;
 }
+.logo-header {
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
 .flex-container {    
-    margin-top: 10px;
     display: flex;
+    padding-top: 5px;
     align-items: space-between;
     flex-flow: row nowrap;
     align-self: center;
@@ -23,6 +27,19 @@
     flex-flow: row nowrap;
     justify-items: center;
 }
+.link {
+    color: #999999;
+    border: 0px;
+    text-decoration-line: none; 
+}
+.link :visited, :hover {
+    color: green;
+}
+ul a :hover, :visited {
+    border: 2px;
+    border-bottom-color: green;
+}
+
 
 
  
