@@ -12,7 +12,7 @@
    margin-bottom: 80px;
 }
 .background-login {
-    background-image: url('/src/assets/imagen/fondowebppp.jpg');
+    background-image: url('/assets/imagen/fondowebppp.jpg');
     position: fixed;
     height: 100%;
     width: 100%;
@@ -49,7 +49,6 @@
     margin-bottom: 10px;
 }
 #icon-user {
-    /*margin-top: 10px;*/
     border-width: 1px;
     border-bottom-color: #cccccc;
 }
