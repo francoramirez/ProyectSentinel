@@ -22,3 +22,7 @@
 a {
     color: #999999;
 }
+
+#logo {
+    align-items: center;
+}
