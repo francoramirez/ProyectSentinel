@@ -55,7 +55,7 @@ postLogin(userLogin, passwordLogin): Observable<Cliente> {
   }), catchError( (err) => {
     console.log('ERROR!!');
     const cliente: Cliente = new Cliente();
-    cliente.NombresFull = 'CESAR AUGUSTO';
+    cliente.NombresFull = 'Cesar Augusto';
     cliente.SesionLogin = "62738047088510327932";
 
     return of(cliente);

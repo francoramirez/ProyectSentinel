@@ -22,3 +22,8 @@
 a {
     color: #999999;
 }
+.logo-footer {
+    position: relative;
+    bottom: 25px;
+    left: 75%;
+}

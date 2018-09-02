@@ -1,5 +1,30 @@
 <div class="background-login">
-    <div class="container">
-        dashboard  - {{cliente.NombresFull}}
+    <div class="flex-container">
+        <div class="flex-container sentinel-flex-row">
+            <h1>Hola {{ cliente.NombresFull }}</h1>
+        </div>
+        <div class="flex-container sentinel-flex-welcome">
+            <h3> Bienvenido a Mi Sentinel</h3>
+        </div>
+        <div class="flex-container sentinel-flex-information">
+            <p>
+                Consulta gratuita e ilimitadamente tu Reporte de Deudas Resumido y accede a tu Reporte de Deudas Detallado, una vez cada
+                3 meses. Contiene información de entidades financieras, empresas privadas, organismos del estado y empresas
+                de servicios.
+            </p>
+        </div>
+        <div class="flex-container sentinel-flex-semaforo">
+            <h2>Tu semáforo <br> actual es:</h2>
+            <div class="semaforo"></div>
+            <div class="message"></div>
+        </div>
+        <div class="flex-container sentinel-flex-row">
+            <p></p>
+        </div>
+        <div class="flex-container sentinel-flex-report">
+            <div class="button">
+                <button type="button" class="button-standard">Ver Mi Reporte</button>
+            </div>
+        </div>
     </div>
 </div>
