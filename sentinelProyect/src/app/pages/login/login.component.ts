@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
 
    LoginClickHome() {
 
-    
     if(this.loginForm.valid) {
 
       this.error = undefined;
@@ -34,7 +33,10 @@ export class LoginComponent implements OnInit {
       this.service.postLogin("72012380","1234567")    
       .subscribe( (resp: Cliente) => {
         
+        /** Setea el cliente en el Store */
         this.store.updateCliente(resp);
+        
+        /** Setea la id de la sesion en el SesionStorage */
         sessionStorage.setItem('sesion', resp.SesionLogin);
         this.router.navigate(['/app']);
       }, (err) => {
