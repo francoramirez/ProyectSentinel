@@ -26,8 +26,6 @@ export class DashboardComponent implements OnInit {
               private store: ClientesStore) { }
 
 
-   
-
   ngOnInit() {
 
     this.initForm();
@@ -35,16 +33,16 @@ export class DashboardComponent implements OnInit {
 
     setTimeout( () => {
 
+      /** Obtiene el cliente del Store */
       this.store.getCliente().subscribe( (cliente: Cliente) => {
-  
+
         if (cliente) {
           this.cliente = cliente;
         }
-  
+
       });
     });
-    
-    
+
   }
 
 

@@ -8,7 +8,7 @@
    left: 30px;
 }
 .background-login {
-    background-image: url('/src/assets/imagen/fondowebppp.jpg');
+    background-image: url('/assets/imagen/fondowebppp.jpg');
     position: fixed;
     height: 100%;
     width: 100%;
