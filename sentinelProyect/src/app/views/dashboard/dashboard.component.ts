@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { SentinelService } from '../../sentinel.service';
 import { DashboardService } from './dashboard.service';
-import { Cliente } from '../../commons/Models/cliente.model';
+import { Cliente } from '../../commons/models/cliente.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ClientesStore } from '../../commons/stores/clientes/clientes.store';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,37 +22,29 @@ export class DashboardComponent implements OnInit {
   
   constructor(private router: Router, 
               private service: DashboardService,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder,
+              private store: ClientesStore) { }
 
 
-
-   LoginClickHome() {
-
-    
-    if(this.loginForm.valid) {
-
-      this.error = undefined;
-      
-      this.service.postLogin("72012380","1234567")    
-      .subscribe( (resp: Cliente) => {
-        
-        console.log('Exito desde login', resp.NombresFull);
-        this.router.navigate(['/home']);
-      }, (err) => {
-        console.log('Error', err);
-      });    
-
-    } else {
-    console.log('ERROR EN FORMULARIO');
-    this.error = 'Datos Inválidos';
-    }
-  }
+   
 
   ngOnInit() {
 
     this.initForm();
     this.cliente = new Cliente();
-    this.cliente.NombresFull = "Franco Ramirez";
+
+    setTimeout( () => {
+
+      this.store.getCliente().subscribe( (cliente: Cliente) => {
+  
+        if (cliente) {
+          this.cliente = cliente;
+        }
+  
+      });
+    });
+    
+    
   }
 
 
@@ -60,7 +53,7 @@ export class DashboardComponent implements OnInit {
     this.loginForm = this.fb.group({
       documento: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(20)])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(20)])]
-    })
+    });
 
   }
 

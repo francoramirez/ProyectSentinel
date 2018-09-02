@@ -2,8 +2,9 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { SentinelService } from '../../sentinel.service';
 import { LoginService } from './login.service';
-import { Cliente } from '../../commons/Models/cliente.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Cliente } from '../../commons/models/cliente.model';
+import { ClientesStore } from '../../commons/stores/clientes/clientes.store';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
   
   constructor(private router: Router, 
               private service: LoginService,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder,
+              private store: ClientesStore) { }
 
    LoginClickHome() {
 
@@ -32,7 +34,8 @@ export class LoginComponent implements OnInit {
       this.service.postLogin("72012380","1234567")    
       .subscribe( (resp: Cliente) => {
         
-        console.log('Exito desde login', resp.NombresFull);
+        this.store.updateCliente(resp);
+        sessionStorage.setItem('sesion', resp.SesionLogin);
         this.router.navigate(['/app']);
       }, (err) => {
         console.log('Error', err);
@@ -46,6 +49,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
+    this.store.updateCliente(undefined);
     this.initForm();
   }
 

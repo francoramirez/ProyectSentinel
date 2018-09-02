@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { MiReporteService } from './mi-reporte.service';
-import { Cliente } from '../../commons/Models/cliente.model';
+import { Cliente } from '../../commons/models/cliente.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RequestOptions, Http, Response, Headers } from '@angular/http';
-import { ICliente } from './commons/Models/Interface/icliente.interface';
+import { ICliente } from './commons/models/interfaces/icliente.interface';
 import { map } from 'rxjs/operators';
 import { catchError } from 'rxjs/operators';
-import { Cliente } from './commons/Models/cliente.model';
+import { Cliente } from './commons/models/cliente.model';
 import { Observable, of } from 'rxjs';
 
 @Injectable({

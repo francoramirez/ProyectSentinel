@@ -5,8 +5,8 @@ import { map } from 'rxjs/operators';
 import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { ICliente } from '../../commons/Models/Interface/icliente.interface';
-import { Cliente } from '../../commons/Models/cliente.model';
+import { ICliente } from '../../commons/models/interfaces/icliente.interface';
+import { Cliente } from '../../commons/models/cliente.model';
 
 @Injectable()
 export class DashboardService {

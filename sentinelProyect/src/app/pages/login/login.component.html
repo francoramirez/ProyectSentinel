@@ -1,6 +1,6 @@
 <div class="background-login">
         <div class="sentinel-flex sentinel-flex-column" id="left-content">
-            <img class="responsive-img" src="/src/assets/imagen/logo.png" width="360" height="60">
+            <img class="responsive-img" src="/assets/imagen/logo.png" width="360" height="60">
             <div class="sentinel-flex sentinel-flex-row">
                 <form [formGroup]="loginForm">
                     <div class="box-login sentinel-flex sentinel-flex-column">
@@ -57,6 +57,9 @@
                                 <a href="">Olvidé mi contraseña</a>
                             </div>
                         </div>
+                        <div *ngIf="error">
+                            <p class="error-text">{{error}}</p>
+                        </div>
                         <div class="sentinel-flex sentinel-flex-row button-form">
                             <div class="button">
                                 <button type="button" class="button-standard" (click)="LoginClickHome()">Iniciar Sesión</button>
@@ -68,6 +71,6 @@
                     </div>
                 </form>
             </div>
-            <footer> <p>© 2017 Sentinel Perú SA - Todos los derechos reservados</p></footer>{{loginForm.invalid}}
+            <footer> <p>© 2017 Sentinel Perú SA - Todos los derechos reservados</p></footer>
         </div>
 </div>
