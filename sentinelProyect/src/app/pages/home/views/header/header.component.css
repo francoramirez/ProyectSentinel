@@ -1,45 +1,67 @@
 .logo-header {
-   width: 100%; 
-   height: auto;
-}
-.home {
-    position: relative;
-    left: 80px;
-    bottom: 25px;
-    border-color: #f2f2f2;
-}
-.material-icons {
-    color: #999999;
-}
-.logo-header {
-    margin-bottom: 15px;
-    margin-left: 50px;
-}
-.flex-container {    
-    display: flex;
-    padding-top: 5px;
-    align-items: space-between;
-    flex-flow: row nowrap;
-    align-self: center;
-}
-.sentinel-flex-column {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-items: center;
-}
-.link {
-    color: #999999;
-    border: 0px;
-    text-decoration-line: none; 
-}
-.link :visited, :hover {
-    color: green;
-}
-ul a :hover, :visited {
-    border: 2px;
-    border-bottom-color: green;
-}
-
-
+    width: 100%; 
+    height: auto;
+ }
+ .material-icons {
+     color: #999999;
+ }
+ .logo-header {
+     margin-bottom: 15px;
+     margin-left: 50px;
+ }
+ .flex-container {    
+     display: flex;
+     padding-top: 5px;
+     justify-content: space-around;
+     flex-flow: row nowrap;
+ }
+ .sentinel-flex-column {
+     display: flex;
+     padding-top: 15px;
+     flex-flow: row nowrap;
+     justify-content: space-between;
+ }
+ .link {
+     color: #999999;
+     border: 0px;
+     text-decoration-line: none; 
+ }
+ .option {
+     padding-left: 50px;
+     height: 30px;
+ }
+ .option :hover {
+     color: #018B00;
+     padding-bottom: 25px;
+     border-bottom: 4px solid;
+     border-bottom-color: #018B00;
+ }
+ .productos {
+     margin-left: 30px;
+     padding-left: 25px !important;
+     border-left: 1px solid;
+     border-left-color: #999999;
+ }
+ .shopping {
+     padding-left: 30px;
+ }
+ .configuration {
+     padding-left: 30px;
+ }
+ .dot {
+    height: 30px;
+    width: 30px;
+    background-color: #999999;
+    display: inline-block;
+    border-radius: 50%;
+    text-align-last: center;
+    text-align: center;
+    color: #f2f2f2;
+    font-weight: bold;
+ }
+ p {
+     padding-top: 2px;
+ }
+ 
 
  

@@ -7,11 +7,13 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { HomeRoutingModule } from "./home-routing.module";
 import { DashboardModule } from "../../views/dashboard/dashboard.module";
 import { MiReporteModule } from "../../views/mi-reporte/mi-reporte.module";
+import { FooterComponent } from "./views/footer/footer.component";
 
 @NgModule({
     declarations: [
       HomeComponent,
-      HeaderComponent
+      HeaderComponent,
+      FooterComponent
     ],
     imports: [
         CommonModule,
