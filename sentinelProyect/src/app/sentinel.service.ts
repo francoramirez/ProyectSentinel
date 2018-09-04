@@ -17,18 +17,11 @@ export class SentinelService {
   constructor(private http: HttpClient) { 
 
   }
-/*
-  getData() {
-    return this.http.get('https://www.googleapis.com/blogger/v3/blogs/2399953?key=AIzaSyCp3etkeMAvnyrF-jKNMAVz8LLn9Pk7RJI')
-    .subscribe(data => {
-      console.log("We got ", data)
-    })
-  }
-*/
-postLogin(userLogin, passwordLogin) {
+
+postLogin(userLogin: string, passwordLogin: string) {
 
   /** application/json */
-  let headers: HttpHeaders = new HttpHeaders().set('Content-Type','text/plain');
+  let headers: HttpHeaders = new HttpHeaders().set('Content-Type','application/json');
 
   let body = JSON.stringify(
     {
@@ -36,9 +29,9 @@ postLogin(userLogin, passwordLogin) {
       Password: passwordLogin,
       ValidaCookie: 'S',
       Plataforma: 'WEB',
-      VersionId: '',
-      VersOpc: '',
-      Operador: '',
+      VersionId: '1',
+      VersOpc: '1',
+      Operador: '1',
       IdOrigen: 1
     }
   );

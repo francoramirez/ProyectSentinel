@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
               private fb: FormBuilder,
               private store: ClientesStore) { }
 
-   LoginClickHome() {
+   public LoginClickHome() {
 
     if (this.loginForm.valid) {
 

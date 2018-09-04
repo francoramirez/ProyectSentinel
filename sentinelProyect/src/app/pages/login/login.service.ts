@@ -14,19 +14,13 @@ export class LoginService {
   constructor(private http: HttpClient) { 
 
   }  
+pathLogin: string = 'https://misentinel.sentinelperu.com/misentinelws/rest/rws_mslogin';
 
-/*
-  getData() {
-    return this.http.get('https://www.googleapis.com/blogger/v3/blogs/2399953?key=AIzaSyCp3etkeMAvnyrF-jKNMAVz8LLn9Pk7RJI')
-    .subscribe(data => {
-      console.log("We got ", data)
-    })
-  }
-*/
-postLogin(userLogin, passwordLogin): Observable<Cliente> {
+public postLogin(userLogin: string, passwordLogin: string): Observable<Cliente> {
 
   /** application/json */
-  let headers: HttpHeaders = new HttpHeaders().set('Content-Type','text/plain');
+  let headers: HttpHeaders = new HttpHeaders();
+  headers = headers.set('Content-Type','application/json');
 
   let body = JSON.stringify(
     {
@@ -41,7 +35,7 @@ postLogin(userLogin, passwordLogin): Observable<Cliente> {
     }
   );
 
-  return this.http.post( `${environment.urlApi}/rws_mslogin`, body, {headers: headers})
+  return this.http.post( this.pathLogin, body, {headers: headers})
   .pipe( map( (resp: ICliente) => {
 
     const cliente: Cliente = new Cliente();

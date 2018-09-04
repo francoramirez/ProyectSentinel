@@ -10,16 +10,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterReportComponent } from './footer-report/footer-report.component';
-import { FooterHomeComponent } from './footer-home/footer-home.component';
 import { LoginModule } from './pages/login/login.module';
 import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FooterReportComponent,
-    FooterHomeComponent,
+    AppComponent
   ],
   imports: [
     LoginModule,
